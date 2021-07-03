@@ -1,0 +1,46 @@
+flow-nodes:
+  twilio:
+    name: Twilio
+    icon: icon.svg
+    description: Flow-node to send SMS messages.
+    category: Messaging
+    methods:
+      sendSMS: # This same key is used in `actions.js`
+        name: Send SMS Message
+        description: Sends an SMS message.
+        parameters:
+          body:
+            name: Body
+            description: The message.
+            required: true
+            initialType: string
+            schema:
+              type: string
+          to:
+            name: To
+            description: Phone number to send SMS to.
+            required: true
+            initialType: string
+            schema:
+              type: string
+          from:
+            name: From
+            description: Phone number to send SMS from.
+            required: true
+            initialType: string
+            schema:
+              type: string
+        # "Next" (next) output
+        returns:
+          name: Next
+          description: The operation was successful.
+          context: $.sendsmsoutput
+          schema:
+            type: object
+        # "Error" (error) output
+        throws:
+          name: Error
+          description: An unexpected error was encountered.
+          context: $.sendsmsrror
+          schema:
+            type: object
