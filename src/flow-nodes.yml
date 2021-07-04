@@ -16,6 +16,7 @@ flow-nodes:
             initialType: string
             schema:
               type: string
+              example: SMS message
           to:
             name: To
             description: Phone number to send SMS to.
@@ -23,6 +24,7 @@ flow-nodes:
             initialType: string
             schema:
               type: string
+              example: "+12316851234"
           from:
             name: From
             description: Phone number to send SMS from.
@@ -30,6 +32,7 @@ flow-nodes:
             initialType: string
             schema:
               type: string
+              example: "+15555555555"
         # "Next" (next) output
         returns:
           name: Next
@@ -37,6 +40,70 @@ flow-nodes:
           context: $.sendsmsoutput
           schema:
             type: object
+            properties:
+              account_sid:
+                type: string
+                example: ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+              api_version:
+                type: string
+                example: 2010-04-01
+              body:
+                type: string
+                example: Hello there!
+              date_created:
+                type: string
+                example: Thu, 30 Jul 2015 20:12:31 +0000
+              date_sent:
+                type: string
+                example: Thu, 30 Jul 2015 20:12:33 +0000
+              date_updated:
+                type: string
+                example: Thu, 30 Jul 2015 20:12:33 +0000
+              direction:
+                type: string
+                example: outbound-api
+              error_code:
+                type: string
+                example: null
+              error_message:
+                type: string
+                example: null
+              from:
+                type: string
+                example: +15555555555
+              messaging_service_sid:
+                type: string
+                example: MGXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+              num_media:
+                type: string
+                example: 0
+              num_segments:
+                type: string
+                example: 1
+              price:
+                type: string
+                example: null
+              price_unit:
+                type: string
+                example: null
+              sid:
+                type: string
+                example: SMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+              status:
+                type: string
+                example: sent
+              subresource_uris:
+                type: object
+                properties:
+                  media:
+                    type: string
+                    example: /2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Messages/SMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Media.json
+              to:
+                type: string
+                example: +12316851234
+              uri:
+                type: string
+                example: /2010-04-01/Accounts/ACXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX/Messages/SMXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX.json
         # "Error" (error) output
         throws:
           name: Error
