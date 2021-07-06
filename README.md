@@ -1,8 +1,8 @@
 # API Builder Plugin for Twilio
 
-[**Axway API Builder**](https://docs.axway.com/bundle/API_Builder_4x_allOS_en/page/api_builder.html) flow-node that implements [**Twilio**](https://www.twilio.com/go) cloud communication platform methods (e.g. SMS): *api-builder-plugin-twilio*
+[**Axway API Builder**](https://docs.axway.com/bundle/API_Builder_4x_allOS_en/page/api_builder.html) flow-node that implements [**Twilio**](https://www.twilio.com) cloud communication platform methods (e.g. SMS): *api-builder-plugin-twilio*
 
-Methods implemented:
+Methods Implemented:
 
 * messages.create()
 
@@ -30,7 +30,7 @@ Before launching your API Builder app that uses this plugin, you must set the fo
 
 Find the plugin in the Messaging group in the Flow-Nodes panel. Drag onto the canvas and select the desired method and provide the input and wire up to the rest of your flow as shown below:
 
-![]([Imgur](https://i.imgur.com/LyoPuKP.png))
+![](https://i.imgur.com/LyoPuKP.png)
 
 ## Methods
 
@@ -40,7 +40,7 @@ The currently implemented methods are described below.
 
 Twilio docs are [**here**](https://www.twilio.com/docs/sms/send-messages)
 
-Provide the *to* and *from* phone numbers and the SMS message *body() as input and the output will be similar to below:
+Provide the *to* and *from* phone numbers and the SMS message *body* as input and the output will be similar to below:
 
 * from =  '+15017122661'
 * to = '+15558675310'
